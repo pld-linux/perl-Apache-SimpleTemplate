@@ -8,13 +8,13 @@
 Summary:	Apache::SimpleTemplate - a very simple mod_perl template parser
 Summary(pl):	Apache::SimpleTemplate - bardzo prosty parser szablonów mod_perla
 Name:		perl-Apache-SimpleTemplate
-Version:	0.03
-Release:	1
+Version:	0.05
+Release:	2
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-BuildRequires:	perl >= 5.6
-BuildRequires:	rpm-perlprov >= 3.0.3-26
+BuildRequires:	perl >= 5.8.0
+BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	apache-mod_perl
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -37,7 +37,9 @@ naukê; wymagana jest bardzo ma³a znajomo¶æ mod_perla.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor
+
 %{__make}
 %{!?_without_tests:%{__make} test}
 
@@ -52,5 +54,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README
-%{perl_sitelib}/%{pdir}/*.pm
+%{perl_vendorlib}/%{pdir}/*.pm
 %{_mandir}/man3/*
