@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Apache
-%define	pnam	SimpleTemplate
+%define		pdir	Apache
+%define		pnam	SimpleTemplate
 Summary:	Apache::SimpleTemplate - a very simple mod_perl template parser
 Summary(pl):	Apache::SimpleTemplate - bardzo prosty parser szablonów mod_perla
 Name:		perl-Apache-SimpleTemplate
