@@ -1,11 +1,15 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Apache
 %define	pnam	SimpleTemplate
 Summary:	Apache::SimpleTemplate - a very simple mod_perl template parser
 Summary(pl):	Apache::SimpleTemplate - bardzo prosty parser szablonów mod_perla
 Name:		perl-Apache-SimpleTemplate
-Version:	0.02
-Release:	2
+Version:	0.03
+Release:	1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -35,6 +39,7 @@ naukê; wymagana jest bardzo ma³a znajomo¶æ mod_perla.
 %build
 perl Makefile.PL
 %{__make}
+%{!?_without_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
