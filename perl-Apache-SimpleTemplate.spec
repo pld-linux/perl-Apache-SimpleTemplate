@@ -6,7 +6,7 @@
 %define		pdir	Apache
 %define		pnam	SimpleTemplate
 Summary:	Apache::SimpleTemplate - a very simple mod_perl template parser
-Summary(pl):	Apache::SimpleTemplate - bardzo prosty parser szablonów mod_perla
+Summary(pl.UTF-8):   Apache::SimpleTemplate - bardzo prosty parser szablonÃ³w mod_perla
 Name:		perl-Apache-SimpleTemplate
 Version:	0.05
 Release:	2
@@ -28,12 +28,12 @@ text documents, such as HTML files, and have this code executed upon
 HTTP request. It should take moments to set-up and learn; very little
 knowledge of mod_perl is necessary.
 
-%description -l pl
-Apache::SimpleTemplate to jeszcze jeden pakiet szablonów z wbudowanym
-Perlem dla mod_perla. Pozwala na osadzanie bloków kodu Perla w
+%description -l pl.UTF-8
+Apache::SimpleTemplate to jeszcze jeden pakiet szablonÃ³w z wbudowanym
+Perlem dla mod_perla. Pozwala na osadzanie blokÃ³w kodu Perla w
 dokumentach tekstowych, takich jak pliki HTML, oraz uruchamianie tego
-kodu przy ¿±daniach HTTP. Powinna wystarczyæ chwila na uruchomienie i
-naukê; wymagana jest bardzo ma³a znajomo¶æ mod_perla.
+kodu przy Å¼Ä…daniach HTTP. Powinna wystarczyÄ‡ chwila na uruchomienie i
+naukÄ™; wymagana jest bardzo maÅ‚a znajomoÅ›Ä‡ mod_perla.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
