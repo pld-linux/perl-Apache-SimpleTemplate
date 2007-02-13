@@ -6,7 +6,7 @@
 %define		pdir	Apache
 %define		pnam	SimpleTemplate
 Summary:	Apache::SimpleTemplate - a very simple mod_perl template parser
-Summary(pl.UTF-8):   Apache::SimpleTemplate - bardzo prosty parser szablonów mod_perla
+Summary(pl.UTF-8):	Apache::SimpleTemplate - bardzo prosty parser szablonów mod_perla
 Name:		perl-Apache-SimpleTemplate
 Version:	0.05
 Release:	2
